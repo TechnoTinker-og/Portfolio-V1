@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Home - My Professional Portfolio{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="intro">
+        <h1>Hi, I'm <span id="bruteforce-name">Techno Tinker</span>.</h1>
+        <p>I'm a Python Backend Developer with a passion for building impactful solutions.</p>
+        <div class="buttons">
+            <a href="/projects" class="btn">View Projects</a>
+            <a href="/contact" class="btn-outline">Get in Touch</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<div class="scroll-top-btn" onclick="scrollToTop()">↑</div>
+
+<!-- Footer -->
+<footer>
+    <p>Coded by <span>Techno Tinker</span> using <span>Flask & Python</span></p>
+    <p>© 2024 Techno Tinker</p>
+</footer>
+
+<!-- Scroll to Top Script -->
+<script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Bruteforce Name Animation (fast hacker effect)
+        const targetText = "Techno Tinker";
+        const nameElement = document.getElementById("bruteforce-name");
+        const totalDuration = 1000; // 1 second
+        const intervalDuration = 30; // Faster updates for hacker effect
+        const steps = totalDuration / intervalDuration; // Number of steps to complete in 1 second
+        let step = 0;
+
+        function randomChar() {
+            const chars = "!@#$%^&*()_+{}|:?><~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            return chars[Math.floor(Math.random() * chars.length)];
+        }
+
+        function updateText() {
+            let displayText = "";
+            for (let i = 0; i < targetText.length; i++) {
+                if (step / steps > Math.random()) {
+                    displayText += targetText[i];
+                } else {
+                    displayText += randomChar();
+                }
+            }
+            nameElement.textContent = displayText;
+
+            if (step < steps) {
+                step++;
+                setTimeout(updateText, intervalDuration);
+            } else {
+                nameElement.textContent = targetText; // Ensure the final text is correct
+                nameElement.style.transition = "color 0.3s ease"; // Add a final effect
+                nameElement.style.color = "#00ff88"; // Change to a hacker-style green color
+            }
+        }
+
+        updateText();
+    });
+</script>
+{% endblock %}

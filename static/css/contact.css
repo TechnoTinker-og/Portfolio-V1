@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Techno Tinker{% endblock %}
+
+{% block content %}
+<div class="contact-section">
+    <h1 class="contact-title">Contact Me</h1>
+
+    <div class="contact-grid">
+        <div class="contact-box">
+            <h2>Discord Profile</h2>
+            <p><strong>Name:</strong> Techno Tinker ☭</p>
+            <p><strong>Username:</strong> technotinker.</p>
+            <p><strong>User ID:</strong> 1212657148215959612</p>
+        </div>
+
+        <div class="contact-box">
+            <h2>Telegram Profile</h2>
+            <p><strong>Name:</strong> TECHNO TINKER</p>
+            <p><strong>Username:</strong> @TechnoTinker_v2</p>
+            <p><strong>User ID:</strong> 6036920176</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
