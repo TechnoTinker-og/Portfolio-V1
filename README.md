@@ -1,3 +1,6 @@
+Visit my portfolio live at: https://www.techno-tinker.com
+
+
 # Portfolio V1
 
 This is the first version of my personal portfolio website. It showcases my skills, projects, and provides a way to contact me.
@@ -17,9 +20,6 @@ This is the first version of my personal portfolio website. It showcases my skil
 
 ## How to Use
 
-1. Clone the repository:
+Clone the repository:
    ```bash
-   git clone https://github.com/TechnoTinker-og/Portfolio-V1.git```
-
-
-
+   git clone https://github.com/TechnoTinker-og/Portfolio-V1.git
