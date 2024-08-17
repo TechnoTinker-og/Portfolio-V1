@@ -20,4 +20,4 @@ def contact():
 
 if __name__ == '__main__':
     # Set host to '0.0.0.0' to make the server accessible on the local network
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=10000, debug=True)
